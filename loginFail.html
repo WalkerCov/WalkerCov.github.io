@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Covenant Connection</title>
+  <meta name="description" content="Covenant Classical Christian School Information">
+  <meta name="author" content="CCCS">
+  <link rel="shortcut icon" type="image/x-icon" href="resources/images/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180.png">
+  <link rel="shortcut icon" href="icons/manifest-icon-192.png" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles/stylesheet.css">
+
+</head>
+<body class="maintheme"> 
+    <img style="border-radius: 50%;" src="resources/images/covimage.png" alt="Covenant Logo" width="100">
+    <h1 style="text-align: center;">Covenant Connection Login:</h1>
+    <div>
+        <form class="loginForm" action="authenticate" method="POST">
+            <label for="firstName">Name:</label><br>
+            <input type="text" id="first_name" name="first_name" placeholder="Username"><br>
+            <label for="lastName">Password:</label><br>
+            <input type="password" id="pw" name="pw" placeholder="Password"><br><br>
+            
+            <input type="submit" value="Submit">
+            </form><br><br>
+            <h4>Invalid login!</h4>
+    </div>
+  <script>
+    caches.keys().then(function(names) {
+    for (let name of names)
+        caches.delete(name);
+    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+</html>
